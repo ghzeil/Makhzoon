@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="ar" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Makhzoon- نظام إدارة المخزون </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2><i class="fas fa-boxes"></i>مخزوني</h2>
+            <nav>
+                <ul>
+
+                    <li class="active"><i class="fas fa-home"></i>الرئيسية</li>
+                    <li><i class="fas fa-plus-circle"></i> إضافة منتج</li>
+                    <li><i class="fas fa-chart-line></i>التقارير</li>
+                    <li><i class="fas fa-cog"></i>الإعدادات</li>
+
+                    <!-- زر تبديل اللغة -->
+                    <button id="lang-switch" class="btn-lang">English</button>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="main-content">
+            <header>
+                <h1>لوحة إدارة المخزون</h1>
+                <div class="user-info">مرحباً بك</div>
+            </header>
+            <!-- بطاقات الإحصائيات السريعة -->
+            <section class="stats-container">
+                <div class="stat-card">
+                    <h3>إجمالي المنتجات</h3>
+                    <p id="total-products">0</p>
+                </div>
+                <div class="stat-card alert">
+                    <h3>نقص في المخزون</h3>
+                    <p id="low-stock">0</p>
+                </div>
+                <div class="stat-card money">
+                    <h3>قيمة المخزون</h3>
+                    <p id="total-value">0 ر.س</p>
+                </div>
+            </section>
+            <!-- جدول المنتجات -->
+            <section class="inventory-table">
+                <div class="table-header">
+                    <h2>قائمة المنتجات</h2>
+                    <button class="btn-add" id="openModal"> <i class="fas fa-plus"></i> إضافة جديد</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المنتج</th>
+                            <th>الفئة</th>
+                            <th>الكمية</th>
+                            <th>السعر</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                        <!-- هنا سيتم إضافة الصفوف بواسطة JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
